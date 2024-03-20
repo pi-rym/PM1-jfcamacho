@@ -29,6 +29,8 @@ class Repository{
 }
 
 const repository = new Repository();
+const addActivity = document.getElementById("addActivity")
+addActivity.addEventListener("click", handler)
 
 function addObjectActivity(Activity){
     const {id, title, description, imgUrl} = Activity
@@ -94,6 +96,6 @@ function handler(){
 
 }
 
-const addActivity = document.getElementById("addActivity")
-
-addActivity.addEventListener("click", handler)
+module.exports = {
+    Activity, Repository
+}
